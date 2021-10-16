@@ -13,53 +13,192 @@ class _FoodProductsState extends State<FoodProducts> {
     return Container(
       child: Column(
         children: [
-          Text('Food Products'),
-          InkWell(
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Container(
+          Padding(
+            padding: const EdgeInsets.all(6.0),
+            child: Align(
+                alignment: Alignment.topLeft,
+                child: Text(
+                  'Food Products',
+                  style: TextStyle(fontWeight: FontWeight.bold),
+                )),
+          ),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                InkWell(
+                  child: Container(
                     margin: EdgeInsets.all(8),
                     height: 200,
                     width: 200,
-                    color: Colors.blue,
-                    child: Text('Blue'),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('lib/images/ajab_flour.jpeg'),
+                                fit: BoxFit.fitHeight,
+                                colorFilter: new ColorFilter.mode(
+                                    Colors.white.withOpacity(0.1),
+                                    BlendMode.hardLight),
+                              ),
+                            ),
+                          ),
+                        ),
+                        FlatButton(
+                            child: Text('Select'),
+                            color: Colors.yellow,
+                            shape: RoundedRectangleBorder(
+                              borderRadius: BorderRadius.circular(8.0)
+                            ),
+                            onPressed: () {
+                              showSnackBar('Added to cart');
+                            }),
+                      ],
+                    ),
                   ),
-                  Container(
-                    margin: EdgeInsets.all(8),
-                    height: 200,
-                    width: 200,
-                    color: Colors.red,
-                    child: Text('Red'),
+                  onTap: () {},
+                ),
+                //separator
+                Container(
+                  height: 100,
+                  width: 50,
+                  child: VerticalDivider(
+                    color: Colors.grey,
                   ),
-                  Container(
+                ),
+                InkWell(
+                  child: Container(
                     margin: EdgeInsets.all(8),
                     height: 200,
                     width: 200,
-                    color: Colors.black,
-                    child: Text('Black'),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('lib/images/kimbo_oil.jpeg'),
+                                fit: BoxFit.fitHeight,
+                                colorFilter: new ColorFilter.mode(
+                                    Colors.white.withOpacity(0.1),
+                                    BlendMode.hardLight),
+                              ),
+                            ),
+                          ),
+                        ),
+                        FlatButton(
+                            child: Text('Select'),
+                            color: Colors.yellow,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8.0)
+                            ),
+                            onPressed: () {
+                              showSnackBar('Added to cart');
+                            }),
+                      ],
+                    ),
                   ),
-                  Container(
-                    margin: EdgeInsets.all(8),
-                    height: 200,
-                    width: 200,
-                    color: Colors.amber,
-                    child: Text('Amber'),
+                  onTap: () {},
+                ),
+                //separator
+                Container(
+                  height: 100,
+                  width: 50,
+                  child: VerticalDivider(
+                    color: Colors.grey,
                   ),
-                  Container(
+                ),
+                InkWell(
+                  child: Container(
                     margin: EdgeInsets.all(8),
                     height: 200,
                     width: 200,
-                    color: Colors.green,
-                    child: Text('Green'),
-                  )
-                ],
-              ),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('lib/images/kabras_sugar.jpeg'),
+                                fit: BoxFit.fitHeight,
+                                colorFilter: new ColorFilter.mode(
+                                    Colors.white.withOpacity(0.1),
+                                    BlendMode.hardLight),
+                              ),
+                            ),
+                          ),
+                        ),
+                        FlatButton(
+                            child: Text('Select'),
+                            color: Colors.yellow,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8.0)
+                            ),
+                            onPressed: () {
+                              showSnackBar('Added to cart');
+                            }),
+                      ],
+                    ),
+                  ),
+                  onTap: () {},
+                ),
+                //separator
+                Container(
+                  height: 100,
+                  width: 50,
+                  child: VerticalDivider(
+                    color: Colors.grey,
+                  ),
+                ),
+                InkWell(
+                  child: Container(
+                    margin: EdgeInsets.all(8),
+                    height: 200,
+                    width: 200,
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('lib/images/ajab_flour.jpeg'),
+                                fit: BoxFit.fitHeight,
+                                colorFilter: new ColorFilter.mode(
+                                    Colors.white.withOpacity(0.1),
+                                    BlendMode.hardLight),
+                              ),
+                            ),
+                          ),
+                        ),
+                        FlatButton(
+                            child: Text('Select'),
+                            color: Colors.yellow,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8.0)
+                            ),
+                            onPressed: () {
+                              showSnackBar('Added to cart');
+                            }),
+                      ],
+                    ),
+                  ),
+                )
+              ],
             ),
           ),
         ],
       ),
     );
+  }
+
+  void showSnackBar(String value) {
+    Scaffold.of(context).showSnackBar(new SnackBar(
+      behavior: SnackBarBehavior.floating,
+        duration: Duration(seconds: 3),
+        content: Text(value)
+
+    ));
   }
 }

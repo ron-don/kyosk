@@ -67,6 +67,12 @@ flutter:
     - lib/images/offers_img7.png
     - lib/images/offers_img8.jpeg
     - lib/images/offers_img10.jpeg
+    - lib/images/ajab_flour.jpeg
+    - lib/images/colgate_toothpaste.jpeg
+    - lib/images/jik_detergent.jpeg
+    - lib/images/kabras_sugar.jpeg
+    - lib/images/kimbo_oil.jpeg
+    - lib/images/sunlight_soap.jpeg
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

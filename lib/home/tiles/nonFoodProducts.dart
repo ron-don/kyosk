@@ -13,53 +13,185 @@ class _NonFoodProductsState extends State<NonFoodProducts> {
     return Container(
       child: Column(
         children: [
-          Text('Non Food Products'),
-          InkWell(
-            child: SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  Container(
+          Padding(
+            padding: EdgeInsets.all(6.0),
+              child: Align(alignment: Alignment.topLeft, child: Text('Non Food Products', style: TextStyle(fontWeight: FontWeight.bold),))),
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Row(
+              children: [
+                InkWell(
+                  child: Container(
                     margin: EdgeInsets.all(8),
                     height: 200,
                     width: 200,
-                    color: Colors.blue,
-                    child: Text('Blue'),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('lib/images/colgate_toothpaste.jpeg'),
+                                fit: BoxFit.fitHeight,
+                                colorFilter: new ColorFilter.mode(
+                                    Colors.white.withOpacity(0.1),
+                                    BlendMode.hardLight),
+                              ),
+                            ),
+                          ),
+                        ),
+                        FlatButton(
+                            child: Text('Select'),
+                            color: Colors.yellow,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8.0)
+                            ),
+                            onPressed: () {
+                              showSnackBar();
+                            }),
+                      ],
+                    ),
                   ),
-                  Container(
-                    margin: EdgeInsets.all(8),
-                    height: 200,
-                    width: 200,
-                    color: Colors.red,
-                    child: Text('Red'),
+                  onTap: () {},
+                ),
+                //separator
+                Container(
+                  height: 100,
+                  width: 50,
+                  child: VerticalDivider(
+                    color: Colors.grey,
                   ),
-                  Container(
+                ),
+                InkWell(
+                  child: Container(
                     margin: EdgeInsets.all(8),
                     height: 200,
                     width: 200,
-                    color: Colors.black,
-                    child: Text('Black'),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('lib/images/jik_detergent.jpeg'),
+                                fit: BoxFit.fitHeight,
+                                colorFilter: new ColorFilter.mode(
+                                    Colors.white.withOpacity(0.1),
+                                    BlendMode.hardLight),
+                              ),
+                            ),
+                          ),
+                        ),
+                        FlatButton(
+                            child: Text('Select'),
+                            color: Colors.yellow,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8.0)
+                            ),
+                            onPressed: () {
+                              showSnackBar();
+                            }),
+                      ],
+                    ),
                   ),
-                  Container(
-                    margin: EdgeInsets.all(8),
-                    height: 200,
-                    width: 200,
-                    color: Colors.amber,
-                    child: Text('Amber'),
+                  onTap: () {},
+                ),
+                //separator
+                Container(
+                  height: 100,
+                  width: 50,
+                  child: VerticalDivider(
+                    color: Colors.grey,
                   ),
-                  Container(
+                ),
+                InkWell(
+                  child: Container(
                     margin: EdgeInsets.all(8),
                     height: 200,
                     width: 200,
-                    color: Colors.green,
-                    child: Text('Green'),
-                  )
-                ],
-              ),
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('lib/images/sunlight_soap.jpeg'),
+                                fit: BoxFit.fitHeight,
+                                colorFilter: new ColorFilter.mode(
+                                    Colors.white.withOpacity(0.1),
+                                    BlendMode.hardLight),
+                              ),
+                            ),
+                          ),
+                        ),
+                        FlatButton(
+                            child: Text('Select'),
+                            color: Colors.yellow,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8.0)
+                            ),
+                            onPressed: () {
+                              showSnackBar();
+                            }),
+                      ],
+                    ),
+                  ),
+                  onTap: () {},
+                ),
+                //separator
+                Container(
+                  height: 100,
+                  width: 50,
+                  child: VerticalDivider(
+                    color: Colors.grey,
+                  ),
+                ),
+                InkWell(
+                  child: Container(
+                    margin: EdgeInsets.all(8),
+                    height: 200,
+                    width: 200,
+                    child: Column(
+                      children: [
+                        Expanded(
+                          child: Container(
+                            decoration: BoxDecoration(
+                              image: DecorationImage(
+                                image: AssetImage('lib/images/jik_detergent.jpeg'),
+                                fit: BoxFit.fitHeight,
+                                colorFilter: new ColorFilter.mode(
+                                    Colors.white.withOpacity(0.1),
+                                    BlendMode.hardLight),
+                              ),
+                            ),
+                          ),
+                        ),
+                        FlatButton(
+                            child: Text('Select'),
+                            color: Colors.yellow,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(8.0)
+                            ),
+                            onPressed: () {
+                              showSnackBar();
+                            }),
+                      ],
+                    ),
+                  ),
+                  onTap: () {},
+                )
+              ],
             ),
           ),
         ],
       ),
+    );
+  }
+
+  void showSnackBar () {
+    SnackBar(
+        content: Text('Added to Cart'),
+      behavior: SnackBarBehavior.floating,
     );
   }
 }
