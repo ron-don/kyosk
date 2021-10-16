@@ -198,7 +198,6 @@ class _FoodProductsState extends State<FoodProducts> {
       behavior: SnackBarBehavior.floating,
         duration: Duration(seconds: 3),
         content: Text(value)
-
     ));
   }
 }

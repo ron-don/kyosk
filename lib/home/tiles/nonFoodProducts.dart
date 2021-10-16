@@ -47,7 +47,7 @@ class _NonFoodProductsState extends State<NonFoodProducts> {
                                 borderRadius: BorderRadius.circular(8.0)
                             ),
                             onPressed: () {
-                              showSnackBar();
+                              showSnackBar('Added to cart');
                             }),
                       ],
                     ),
@@ -89,7 +89,7 @@ class _NonFoodProductsState extends State<NonFoodProducts> {
                                 borderRadius: BorderRadius.circular(8.0)
                             ),
                             onPressed: () {
-                              showSnackBar();
+                              showSnackBar('Added to cart');
                             }),
                       ],
                     ),
@@ -131,7 +131,7 @@ class _NonFoodProductsState extends State<NonFoodProducts> {
                                 borderRadius: BorderRadius.circular(8.0)
                             ),
                             onPressed: () {
-                              showSnackBar();
+                              showSnackBar('Added to cart');
                             }),
                       ],
                     ),
@@ -173,7 +173,7 @@ class _NonFoodProductsState extends State<NonFoodProducts> {
                                 borderRadius: BorderRadius.circular(8.0)
                             ),
                             onPressed: () {
-                              showSnackBar();
+                              showSnackBar('Added to cart');
                             }),
                       ],
                     ),
@@ -188,10 +188,11 @@ class _NonFoodProductsState extends State<NonFoodProducts> {
     );
   }
 
-  void showSnackBar () {
-    SnackBar(
-        content: Text('Added to Cart'),
-      behavior: SnackBarBehavior.floating,
-    );
+  void showSnackBar(String value) {
+    Scaffold.of(context).showSnackBar(new SnackBar(
+        behavior: SnackBarBehavior.floating,
+        duration: Duration(seconds: 3),
+        content: Text(value)
+    ));
   }
 }

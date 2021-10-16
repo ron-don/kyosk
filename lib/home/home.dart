@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kyosk/home/homeMenu.dart';
 import 'package:kyosk/home/category.dart';
 import 'package:kyosk/home/myAccount.dart';
-import 'package:kyosk/home/myCart.dart';
+import 'package:kyosk/cart/myCart.dart';
 import 'dart:io';
 
 class Home extends StatefulWidget {
