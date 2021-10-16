@@ -19,13 +19,13 @@ class _OffersCarouselState extends State<OffersCarousel> {
     'lib/images/offers_img10.jpeg'
   ];
 
-  List<T> map<T>(List list, Function handler) {
-    List<T> result = [];
-    for (var i = 0; i < list.length; i++) {
-      result.add(handler(i, list[i]));
-    }
-    return result;
-  }
+  // List<T> map<T>(List list, Function handler) {
+  //   List<T> result = [];
+  //   for (var i = 0; i < list.length; i++) {
+  //     result.add(handler(i, list[i]));
+  //   }
+  //   return result;
+  // }
 
 
   @override
@@ -36,19 +36,19 @@ class _OffersCarouselState extends State<OffersCarousel> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           ListTile(
-            title: Text("Great Offers!!!", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),),
-            subtitle: Text("Commodities on offer", style: TextStyle(fontSize: 15.0, fontStyle: FontStyle.italic),),
+            title: Text("Great Offers!!!", style: TextStyle(fontSize: 15.0, fontWeight: FontWeight.bold),),
+            subtitle: Text("Commodities on offer", style: TextStyle(fontSize: 12.0, fontStyle: FontStyle.italic),),
           ),
           CarouselSlider(
             options: CarouselOptions(
-              height: 230,
+              height: 150,
               initialPage: 0,
               enlargeCenterPage: true,
               autoPlay: true,
               reverse: false,
               enableInfiniteScroll: true,
-              autoPlayInterval: Duration(seconds: 4),
-              autoPlayAnimationDuration: Duration(milliseconds: 2700),
+              autoPlayInterval: Duration(seconds: 10),
+              autoPlayAnimationDuration: Duration(milliseconds: 5500),
               // pauseAutoPlayOnTouch: Duration(seconds: 7),
               scrollDirection: Axis.horizontal,
               onPageChanged: (index, reason) {
@@ -73,25 +73,7 @@ class _OffersCarouselState extends State<OffersCarousel> {
             }).toList(),
           ),
           SizedBox(
-            height: 20,
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: map<Widget>(imgList, (index, url) {
-              return Container(
-                width: 7.0,
-                height: 7.0,
-                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 3.0),
-                decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: _current == index
-                        ? Colors.deepOrangeAccent[100]
-                        : Colors.black),
-              );
-            }),
-          ),
-          SizedBox(
-            height: 5,
+            height: 10,
           ),
         ],
       ),

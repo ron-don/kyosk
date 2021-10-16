@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: pages(_currentIndex),
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.grey[200],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
         elevation: 5.0,
