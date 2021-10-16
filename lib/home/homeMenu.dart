@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:kyosk/home/carousels/offers_carousel.dart';
 import 'dart:ui';
+import 'package:kyosk/home/tiles/foodProducts.dart';
+import 'package:kyosk/home/tiles/nonFoodProducts.dart';
 
 class HomeMenuScreen extends StatefulWidget {
   const HomeMenuScreen({Key? key}) : super(key: key);
@@ -27,15 +29,21 @@ class _HomeMenuScreenState extends State<HomeMenuScreen> {
         ),
         //Trending clothes
         Padding(
-          padding: EdgeInsets.only(top: 6.0, bottom: 2.0),
+          padding: EdgeInsets.only(bottom: 2.0),
           child: Card(
               child: OffersCarousel()
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(top: 6.0, bottom: 2.0),
+          padding: EdgeInsets.only(bottom: 2.0),
           child: Card(
-              child: OffersCarousel()
+            child: FoodProducts(),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.only(bottom: 2.0),
+          child: Card(
+            child: NonFoodProducts(),
           ),
         ),
       ],

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:kyosk/home/homeMenu.dart';
 import 'package:kyosk/home/category.dart';
 import 'package:kyosk/home/myAccount.dart';
-import 'package:kyosk/home/myCart.dart';
+import 'package:kyosk/cart/myCart.dart';
 import 'dart:io';
 
 class Home extends StatefulWidget {
@@ -54,7 +54,7 @@ class _HomeState extends State<Home> {
         ),
       ),
       body: pages(_currentIndex),
-      backgroundColor: Colors.grey,
+      backgroundColor: Colors.grey[200],
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.shifting,
         elevation: 5.0,
